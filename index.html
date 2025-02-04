@@ -66,6 +66,18 @@
             visibility: visible;
             opacity: 1;
         }
+        .options {
+            margin-top: 20px;
+        }
+        .option-button {
+            background-color: pink;
+            color: white;
+            font-size: 14px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
         @media (min-width: 768px) {
             .card {
                 font-size: 16px;
@@ -86,7 +98,10 @@
     <div class="overlay" id="overlay">
         <div class="overlay-content">
             <p>Will you be my Valentine?</p>
-            <button onclick="closeOverlay()">Cerrar</button>
+            <div class="options">
+                <button class="option-button" onclick="yesOption()">Sí</button>
+                <button class="option-button" onclick="noOption()">No</button>
+            </div>
         </div>
     </div>
 
@@ -116,6 +131,16 @@
                     i++;
                 }
             }, 20);
+        }
+
+        function yesOption() {
+            alert("¡Sí! ¡Gracias!");
+            closeOverlay();
+        }
+
+        function noOption() {
+            alert("No, lo siento.");
+            closeOverlay();
         }
 
         function closeOverlay() {

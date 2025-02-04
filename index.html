@@ -12,6 +12,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
         .card {
             width: 80%;
@@ -23,7 +24,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
             font-size: 4vw;
             max-font-size: 16px;
             color: black;
@@ -135,7 +135,7 @@
 
         function yesOption() {
             const phoneNumber = "7228076819"; // Replace with the actual phone number
-            const message = "¡Sí!, acepto ser tu valentin";
+            const message = "¡Sí! acepto ser parte";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, "_blank");
             closeOverlay();

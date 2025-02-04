@@ -134,7 +134,10 @@
         }
 
         function yesOption() {
-            alert("¡Sí! ¡Gracias!");
+            const phoneNumber = "7228076819"; // Replace with the actual phone number
+            const message = "¡Sí!";
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank");
             closeOverlay();
         }
 
